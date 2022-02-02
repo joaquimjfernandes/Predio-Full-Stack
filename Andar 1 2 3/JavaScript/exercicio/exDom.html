@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitando Dom</title>
+    <style>
+        body{
+            background-color: rgb(92, 125, 235);
+            color: white;
+            font: normal 14pt Arial;
+        }
+        nav h1{
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            text-align: center;
+            font: normal 22pt Arial;
+        }
+        nav p{
+            text-align: center;
+            font: normal 24pt Arial;
+            margin-bottom: 80px;
+        }
+        input[type='number']{
+            width: 100px;
+            padding: 5px;
+        }
+        input[type='button']{
+            width: 100px;
+            padding: 5px;
+            border-radius: 50px;
+            color: white;
+            font: normal 14pt Arial;
+            background-color: green;
+        }
+        div#res{
+            color: black;
+            font: bold 14pt Arial;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        div#area{
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: white;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Testando Dom</h1>
+        <p>Document Object Model</p>
+    </nav>
+    <main>
+        <section>
+            <h2>Somando Valores</h2>
+            <input type="number" name="txtn1" id="txtn1"> +
+            <input type="number" name="txtn2" id="txtn2">
+            <input type="button" value="Somar" onclick="somar()">
+            <div id="res">Aqui vai o Resultado</div>
+        </section>
+        <div id="area">
+            Interaja...
+        </div>
+    </main>
+    <script>
+        function somar(){
+            let tn1 = window.document.getElementById('txtn1')
+            let tn2 = window.document.getElementById('txtn2')
+            let res = window.document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let s = n1 + n2
+            res.innerHTML = `${s}`
+        }
+
+        let a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar(){
+            a.innerText = 'Clicou'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            a.innerText = 'Entrou'
+        }
+        function sair(){
+            a.innerText = 'Saiu'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

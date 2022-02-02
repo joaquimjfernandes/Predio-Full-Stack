@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Exercicio</title>
+    <style>
+        body{
+            background-color: rgb(137, 137, 255);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: rgb(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da Maldição!</p>
+    <script>
+        /*window.alert('Minha primeira Mensagem!')
+        window.confirm('Está gostando de JS?')*/
+        let nome = window.prompt('Qual é seu Nome?')
+        document.write(`É um prazer Conhecer Você ${nome}!`)
+        let n1 = Number(window.prompt('Primeiro Numero: '))
+        let n2 = Number(window.prompt('Segundo Numero: '))
+        let soma = n1 + n2
+        document.write(`A soma dos dois Numeros é igual a ${soma}`)
+    </script>
+</body>
+</html>

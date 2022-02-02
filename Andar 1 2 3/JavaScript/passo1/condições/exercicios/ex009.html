@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Country</title>
+    <style>
+        body{
+            background-color: bisque;
+            color: black;
+            font-size: 1.2em;
+        }
+        input{
+            width: 150px;
+            padding: 10px;
+        }
+        input[type='button']{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descobrindo o País</h1>
+    Informe o seu País: <input type="text" name="txtps" id="txtps">
+    <input type="button" value="Verificar País" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar(){
+            let txtp = document.getElementById('txtps')
+            let res = document.getElementById('res')
+            let p = String(txtp.value)
+            let pais = 'Angola'
+            res.innerHTML += `Vivendo em ${pais}`
+            if (p == pais){
+                res.innerHTML += `<p>Você é <strong>Nativo</strong></p>`
+            }else{
+                res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>

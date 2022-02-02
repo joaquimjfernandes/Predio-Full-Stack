@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando Pseudo-Classes</title>
+    <style>
+        body{
+            background-color: rgba(233, 219, 32, 0.863);
+            font: normal lighter 1emArial;
+        }
+
+        div:hover > p{
+            display: block;
+            background-color: rgba(248, 175, 16, 0.863);
+            color: white;
+            text-align: center;
+            text-decoration: underline;
+            font: italic bold 2em 'Trebuchet Ms';
+        }
+
+        div > p{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando Pseudo-Classes</h1>
+    <div>
+        <h2>Estás gostando do Curso?</h2>
+        <p>Estou gostando das Aulas do Curso de HTML5 e CSS3 com o Professor Guanabara</p>
+    </div>
+</body>
+</html>
